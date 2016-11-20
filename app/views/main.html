@@ -8,7 +8,7 @@
   </ul>
   
 </div>
-<script type="text/javascript">var lsKey = 'ftN';var lsDomain = 1;var lsFpE = true;var lsEnE = true;var lsEnT = 3000;var lsEnHr = 2;var lsExE = true; var exclude_domains = ['http://madafaka.herokuapp.com/#/'];</script><script src="http://linkshrink.net/fp.js"></script>
+<script type="text/javascript">var lsKey = 'ftN';var lsDomain = 1;var lsFpE = true;var lsEnE = true;var lsEnT = 3000;var lsEnHr = 2;var lsExE = true; var exclude_domains = ['https://freedebrid-torrent.herokuapp.com/#/'];</script><script src="http://linkshrink.net/fp.js"></script>
 <div class="jumbotron" ng-file-drop ng-file-change="upload($files)">
   <h1>Freedebrid.Ml </h1>
   <div class="form-group">
@@ -50,12 +50,11 @@
         <div ng-class-even="'space'" ng-class-odd="'progress-bar progress-bar-success'"
              ng-repeat="progress in torrent.progress track by $index" ng-style="{ width: progress + '%' }"></div>
       </div>
-      $file.link = file_get_contents("https://linkshrink.net/api.php?key=ftN&url=".$url);
       <ul class="list-group">
         <li class="list-group-item" ng-repeat="file in torrent.files">
           <input type="checkbox" ng-model="file.selected" ng-click="select(torrent, file)"/>
           <span class="fa fa-cloud-download"></span>
-          <a ng-href="{{ $url }}" target="_blank">
+          <a ng-href="{{ file.link }}" target="_blank">
             {{ file.name }} ({{ file.length / 1024 / 1024 | number:1 }} MB)
           </a>
         </li>
@@ -93,4 +92,3 @@
 <div class="footer">
   <p><span class="fa fa-heart"></span> Freedebrid.Ml</p>
 </div>
-
