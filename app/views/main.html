@@ -10,10 +10,10 @@
 </div>
 
 <div class="jumbotron" ng-file-drop ng-file-change="upload($files)">
-  <h1>Stream Torrents</h1>
+  <h1>Freedebrid.Ml Torrents</h1>
   <div class="form-group">
     <div class="input-group">
-      <span class="input-group-addon">torrent:</span>
+      <span class="input-group-addon">magnet:</span>
       <input type="text" class="form-control" placeholder="Torrent or magnet link" ng-model="link" ng-keypress="keypress($event)">
     </div>
   </div>
@@ -63,9 +63,7 @@
     <div class="panel-footer">
       <ul class="list-unstyled list-inline">
         <li class="text-nowrap">
-          <button type="button" class="btn btn-xs" ng-click="pause(torrent)">
-            <span class="fa {{ torrent.stats.paused ? 'fa-play' : 'fa-pause' }}"></span>
-          </button>
+          
         </li>
         <li class="text-nowrap" ng-show="torrent.stats">
           <strong>Speed:</strong>
@@ -92,5 +90,5 @@
 </div>
 
 <div class="footer">
-  <p><span class="fa fa-heart"></span> peerflix</p>
+  <p><span class="fa fa-heart"></span> Freedebrid.Ml</p>
 </div>
